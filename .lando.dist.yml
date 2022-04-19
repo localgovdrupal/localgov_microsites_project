@@ -1,0 +1,91 @@
+name: localgov-micro
+recipe: drupal9
+config:
+  xdebug: false
+  webroot: web
+  php: '8.1'
+proxy:
+  mailhog:
+    - mail.localgov-micro.lndo.site
+  adminer:
+    - adminer.localgov-micro.lndo.site
+services:
+  appserver:
+    overrides:
+      environment:
+        DRUSH_OPTIONS_ROOT: '/app/web'
+        DRUSH_OPTIONS_URI: 'https://localgov-micro.lndo.site'
+        SIMPLETEST_DB: 'mysql://database:database@database/database'
+        MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", { "chromeOptions": { "w3c": false } }, "http://chromedriver:4444/wd/hub"]'
+  database:
+    creds:
+      user: database
+      password: database
+      database: database
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: true
+  adminer:
+    type: compose
+    services:
+      image: dehy/adminer
+      command: '/bin/s6-svscan /etc/services.d'
+    portforward: true
+  node:
+    type: 'node:16'
+    globals:
+      gulp-cli: latest
+    overrides:
+      ports:
+      - '3050:3050'
+  chromedriver:
+    type: compose
+    services:
+      image: robcherry/docker-chromedriver:latest
+      environment:
+        CHROMEDRIVER_WHITELISTED_IPS: ""
+        CHROMEDRIVER_URL_BASE: "/wd/hub"
+      security_opt:
+        - seccomp:unconfined
+      expose:
+        - '4444'
+      command: ["/usr/local/bin/supervisord", "-c", "/etc/supervisord.conf"]
+tooling:
+  deprecated:
+    service: appserver
+    cmd: 'bash -c "/app/bin/phpstan analyse -c /app/phpstan.neon /app/web/profiles/contrib/localgov_microsites/ /app/web/modules/contrib/localgov_*/  /app/web/themes/contrib/localgov_theme/"'
+  drush:
+    service: appserver
+    cmd: '/app/bin/drush'
+  phpcs:
+    service: appserver
+    cmd: '/app/bin/phpcs'
+  phix:
+    service: appserver
+    cmd: '/app/bin/phpcbf'
+  phpstan:
+    service: appserver
+    cmd: '/app/bin/phpstan'
+  phpunit:
+    service: appserver
+    cmd: '/app/bin/phpunit --testdox'
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
+  gulp:
+    service: node
+  node:
+    service: node
+  npm:
+    service: node
+  yarn:
+    service: node
