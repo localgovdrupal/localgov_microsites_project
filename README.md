@@ -9,5 +9,5 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project localgovdrupal/localgov_microsites_project MY_PROJECT
+composer create-project --stability dev localgovdrupal/localgov_microsites_project MY_PROJECT
 ```
