@@ -18,7 +18,7 @@
         "drush/drush": "^10.6"
     },
     "require-dev": {
-        "brianium/paratest": "^6.4",
+        "brianium/paratest": "^6.3",
         "drupal/core-dev": "^9.3",
         "mglaman/phpstan-drupal": "^1.1",
         "phpstan/phpstan": "^1.5",
