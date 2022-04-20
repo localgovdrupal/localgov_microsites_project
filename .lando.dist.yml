@@ -9,8 +9,17 @@ proxy:
     - mail.localgov-micro.lndo.site
   adminer:
     - adminer.localgov-micro.lndo.site
+  appserver:
+    - localgov-micro.lndo.site
+    - localgov-micro-1.lndo.site
+    - localgov-micro-2.lndo.site
+    - localgov-micro-3.lndo.site
+    - localgov-micro-4.lndo.site
+    - localgov-micro-5.lndo.site
 services:
   appserver:
+    run_as_root:
+      - 'bash /app/web/modules/contrib/domain_group/define_subdomains.sh'
     overrides:
       environment:
         DRUSH_OPTIONS_ROOT: '/app/web'
