@@ -7,7 +7,12 @@
     "repositories": {
         "drupal": {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": ["drupal/domain_group"]
+        },
+        "drupal/domain_group": {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/domain_group-3276172.git"
         }
     },
     "require": {
