@@ -27,6 +27,7 @@
         "brianium/paratest": "^6.3",
         "drupal/core-dev": "^9.3",
         "mglaman/phpstan-drupal": "^1.1",
+        "phpspec/prophecy-phpunit": "^2",
         "phpstan/phpstan": "^1.5",
         "phpstan/phpstan-deprecation-rules": "^1.0"
     },
