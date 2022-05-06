@@ -12,7 +12,7 @@
         },
         "drupal/domain_group": {
             "type": "vcs",
-            "url": "https://git.drupalcode.org/issue/domain_group-3276172.git"
+            "url": "https://git.drupalcode.org/sandbox/ekes-3278349.git"
         }
     },
     "require": {
