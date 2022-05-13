@@ -9,7 +9,7 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project --stability dev localgovdrupal/localgov_microsites_project MY_PROJECT
+composer create-project --stability dev localgovdrupal/localgov_microsites_project MY_PROJECT  --no-install 
 ```
 
 ## Using Lando
@@ -17,7 +17,18 @@ composer create-project --stability dev localgovdrupal/localgov_microsites_proje
 If using Lando, you can then boot up Lando and run the site install
 
 ```shell
-cd MY_PROOJECT
+cd MY_PROJECT
 lando start
+lando composer install
 lando drush si localgov_microsites
+```
+
+## Not using Lando
+
+If you're not using lando, you'll still need to run the composer install.
+
+```shell
+cd MY_PROJECT
+composer install
+drush si localgov_microsites
 ```
