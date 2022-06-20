@@ -21,7 +21,9 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drush/drush": "^10.6",
-        "localgovdrupal/localgov_microsites": "1.x"
+        "localgovdrupal/localgov_microsites": "dev-feature/57-directores as 1.x-dev",
+        "localgovdrupal/localgov_microsites_base": "dev-fix/40-sidebars as 1.x-dev",
+        "localgovdrupal/localgov_microsites_group": "dev-feature/57-directories as 1.x-dev"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
