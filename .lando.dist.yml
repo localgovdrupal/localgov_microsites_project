@@ -10,16 +10,23 @@ proxy:
   adminer:
     - adminer.localgov-micro.lndo.site
   appserver:
+    # Microsite domains
     - localgov-micro.lndo.site
     - localgov-micro-1.lndo.site
     - localgov-micro-2.lndo.site
     - localgov-micro-3.lndo.site
     - localgov-micro-4.lndo.site
     - localgov-micro-5.lndo.site
+    # PHPUnit test domains
+    - appserver
+    - group-a1.appserver
+    - group-a2.appserver
+    - group-a3.appserver
+    - group-b1.appserver
+    - group-b2.appserver
+    - group-b3.appserver
 services:
   appserver:
-    run_as_root:
-      - 'bash /app/web/modules/contrib/domain_group/define_subdomains.sh'
     overrides:
       environment:
         DRUSH_OPTIONS_ROOT: '/app/web'
