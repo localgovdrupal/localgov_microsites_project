@@ -9,7 +9,7 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project --stability dev localgovdrupal/localgov_microsites_project MY_PROJECT  --no-install 
+composer create-project --stability dev localgovdrupal/localgov_microsites_project MY_PROJECT  --no-install
 ```
 
 ## Using Lando
@@ -31,4 +31,31 @@ If you're not using lando, you'll still need to run the composer install.
 cd MY_PROJECT
 composer install
 drush si localgov_microsites
+```
+
+## Runnint PHPUnit tests in Lando
+
+The included phpunit.xml.dist file contains configuration for automatically
+running the LocalGov Drupal test suite.
+
+To run all LocalGov Drupal tests with Lando use:
+
+```bash
+lando ssh
+phpunit
+```
+
+To run all the tests for a specific module use:
+
+```bash
+lando ssh
+phpunit web/modules/contrib/localgov_my_module
+```
+
+Tests can be filtered using the `--filter` option. To only run a specific test
+use:
+
+```bash
+lando ssh
+phpunit --filter=myTestName
 ```
