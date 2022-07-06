@@ -16,7 +16,7 @@
         <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/databasename#table_prefix -->
         <env name="SIMPLETEST_DB" value="mysql://database:database@database/database"/>
         <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
-        <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/app/sites/simpletest/browser_output"/>
+        <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/app/web/sites/simpletest/browser_output"/>
         <!-- To have browsertest output use an alternative base URL. For example if
          SIMPLETEST_BASE_URL is an internal DDEV URL, you can set this to the
          external Lando URL so you can follow the links directly.
