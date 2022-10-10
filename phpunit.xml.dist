@@ -26,13 +26,13 @@
 
     <testsuites>
         <testsuite name="profile">
-            <directory>web/profiles/contrib/localgov_*</directory>
+            <directory>web/profiles/contrib/localgov_microsites*</directory>
         </testsuite>
         <testsuite name="modules">
-            <directory>web/modules/contrib/localgov_*</directory>
+            <directory>web/modules/contrib/localgov_microsites*</directory>
         </testsuite>
         <testsuite name="themes">
-            <directory>./web/themes/contrib/localgov_*</directory>
+            <directory>./web/themes/contrib/localgov_microsites*</directory>
         </testsuite>
     </testsuites>
 
