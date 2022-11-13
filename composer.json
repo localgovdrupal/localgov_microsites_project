@@ -20,7 +20,7 @@
         },
         "drupal/group_permissions": {
           "type": "vcs",
-          "url": "https://git.drupalcode.org/issue/group_permissions-3314382.git"
+          "url": "https://git.drupalcode.org/project/group_permissions.git"
         },
         "drupal/group_term": {
             "type": "vcs",
