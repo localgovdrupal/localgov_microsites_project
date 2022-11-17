@@ -8,11 +8,23 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
-            "exclude": ["drupal/domain_group"]
+            "exclude": ["drupal/domain_group", "drupal/group_content_menu", "drupal/group_term", "drupal/group_permissions"]
         },
         "drupal/domain_group": {
             "type": "vcs",
             "url": "https://git.drupalcode.org/sandbox/ekes-3278349.git"
+        },
+        "drupal/group_content_menu": {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/group_content_menu-3315163.git"
+        },
+        "drupal/group_permissions": {
+          "type": "vcs",
+          "url": "https://git.drupalcode.org/project/group_permissions.git"
+        },
+        "drupal/group_term": {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/group_term-3316529.git"
         }
     },
     "require": {
@@ -21,7 +33,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drush/drush": "^10.6",
-        "localgovdrupal/localgov_microsites": "^1.0@alpha"
+        "localgovdrupal/localgov_microsites": "2.x-dev"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
