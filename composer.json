@@ -33,7 +33,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drush/drush": "^10.6",
-        "localgovdrupal/localgov_microsites": "2.x-dev"
+        "localgovdrupal/localgov_microsites": "^2.0.0-beta1"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
