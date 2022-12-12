@@ -63,8 +63,16 @@
                 "web-root": "web/"
             },
             "file-mapping": {
-                "[web-root]/.htaccess": false,
-                "[web-root]/robots.txt": false,
+                "[web-root]/.htaccess": {
+                    "mode": "replace",
+                    "path": "web/core/assets/scaffold/files/htaccess",
+                    "overwrite": false
+                },
+                "[web-root]/robots.txt": {
+                    "mode": "replace",
+                    "path": "web/core/assets/scaffold/files/robots.txt",
+                    "overwrite": false
+                },
                 "[web-root]/sites/default/settings.php": {
                     "mode": "replace",
                     "path": "assets/composer/settings.php",
