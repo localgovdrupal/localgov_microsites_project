@@ -65,10 +65,12 @@
             "file-mapping": {
                 "[web-root]/.htaccess": {
                     "mode": "replace",
+                    "path": "assets/composer/.htaccess",
                     "overwrite": false
                 },
                 "[web-root]/robots.txt": {
                     "mode": "replace",
+                    "path": "assets/composer/robots.txt",
                     "overwrite": false
                 },
                 "[web-root]/sites/default/settings.php": {
