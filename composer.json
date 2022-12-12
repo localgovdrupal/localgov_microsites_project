@@ -8,7 +8,7 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
-            "exclude": ["drupal/domain_group", "drupal/group_content_menu", "drupal/group_term", "drupal/group_permissions"]
+            "exclude": ["drupal/domain_group", "drupal/group_content_menu", "drupal/group_permissions"]
         },
         "drupal/domain_group": {
             "type": "vcs",
@@ -21,10 +21,6 @@
         "drupal/group_permissions": {
           "type": "vcs",
           "url": "https://git.drupalcode.org/project/group_permissions.git"
-        },
-        "drupal/group_term": {
-            "type": "vcs",
-            "url": "https://git.drupalcode.org/issue/group_term-3316529.git"
         }
     },
     "require": {
