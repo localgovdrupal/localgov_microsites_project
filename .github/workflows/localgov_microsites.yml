@@ -6,10 +6,10 @@ name: Test LocalGov Microsites localgovdrupal/localgov_microsites_project projec
 on:
   push:
     branches:
-      - '1.x'
+      - '2.x'
   pull_request:
     branches:
-      - '1.x'
+      - '2.x'
 
 env:
   LOCALGOV_DRUPAL_PROJECT: localgovdrupal/localgov_microsites_project
@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
@@ -57,7 +57,7 @@ jobs:
       - name: Get the latest tagged release for branch version
         run: |
           LATEST_RELEASE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${GITHUB_REPOSITORY}/git/matching-refs/tags/${GIT_BASE%'.x'} | grep -Po '(?<=refs/tags/)[^"]+' | tail -1)
-          if [ -z $LATEST_RELEASE ]; then LATEST_RELEASE=1.x-dev; fi
+          if [ -z $LATEST_RELEASE ]; then LATEST_RELEASE=2.x-dev; fi
           echo "LATEST_RELEASE=${LATEST_RELEASE}" >> $GITHUB_ENV
 
       - name: Cached workspace
@@ -89,7 +89,7 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
@@ -125,7 +125,7 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
@@ -160,7 +160,7 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
