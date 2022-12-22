@@ -8,15 +8,11 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
-            "exclude": ["drupal/domain_group", "drupal/group_content_menu", "drupal/group_permissions"]
+            "exclude": ["drupal/domain_group", "drupal/group_permissions"]
         },
         "drupal/domain_group": {
             "type": "vcs",
             "url": "https://git.drupalcode.org/sandbox/ekes-3278349.git"
-        },
-        "drupal/group_content_menu": {
-            "type": "vcs",
-            "url": "https://git.drupalcode.org/issue/group_content_menu-3315163.git"
         },
         "drupal/group_permissions": {
           "type": "vcs",
