@@ -27,7 +27,7 @@ jobs:
         localgov-version:
           - '2.x'
         drupal-version:
-          - '~9.3'
+          - '~9.4.0'
         php-version:
           - '8.1'
 
