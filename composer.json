@@ -25,7 +25,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drush/drush": "^10.6",
-        "localgovdrupal/localgov_microsites": "^2.0.0-beta1"
+        "localgovdrupal/localgov_microsites": "dev-feature/2.1.x/365-php-8.0 as 2.0.0-beta2"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
