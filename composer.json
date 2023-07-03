@@ -12,7 +12,7 @@
         },
         "drupal/domain_group": {
             "type": "vcs",
-            "url": "https://git.drupalcode.org/sandbox/ekes-3278349.git"
+            "url": "https://git.drupalcode.org/project/domain_group.git"
         },
         "drupal/group_permissions": {
           "type": "vcs",
@@ -25,7 +25,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drush/drush": "^11.5",
-        "localgovdrupal/localgov_microsites": "^2.0.0-beta1"
+        "localgovdrupal/localgov_microsites": "^2.1.0-beta6"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
