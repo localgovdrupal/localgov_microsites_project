@@ -1,5 +1,5 @@
 ##
-# Managed by https://github.com/localgovdrupal/github_workflow_manager 
+# Managed by https://github.com/localgovdrupal/github_workflow_manager
 ---
 name: Test LocalGov Microsites localgovdrupal/localgov_microsites_project project
 
@@ -13,7 +13,7 @@ on:
 
 env:
   LOCALGOV_DRUPAL_PROJECT: localgovdrupal/localgov_microsites_project
-  LOCALGOV_DRUPAL_PROJECT_PATH: 
+  LOCALGOV_DRUPAL_PROJECT_PATH:
 
 jobs:
 
@@ -30,6 +30,7 @@ jobs:
           - '~10.0'
         php-version:
           - '8.1'
+          - '8.2'
 
     steps:
 
@@ -93,6 +94,7 @@ jobs:
           - '~10.0'
         php-version:
           - '8.1'
+          - '8.2'
 
     steps:
 
@@ -128,6 +130,7 @@ jobs:
           - '~10.0'
         php-version:
           - '8.1'
+          - '8.2'
 
     steps:
 
@@ -162,6 +165,7 @@ jobs:
           - '~10.0'
         php-version:
           - '8.1'
+          - '8.2'
 
     steps:
 
