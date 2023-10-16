@@ -1,5 +1,6 @@
 parameters:
-  level: 1
+  # we don't set a level so that we check deprecations only, and
+  # not to highlight unknown classes which are from composer suggestions
   customRulesetUsed: true
   reportUnmatchedIgnoredErrors: false
   # Ignore phpstan-drupal extension's rules.
