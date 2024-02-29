@@ -8,15 +8,18 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
-            "exclude": ["drupal/domain_group", "drupal/group_permissions"]
+            "exclude": [
+                "drupal/domain_group",
+                "drupal/group_permissions"
+            ]
         },
         "drupal/domain_group": {
             "type": "vcs",
             "url": "https://git.drupalcode.org/project/domain_group.git"
         },
         "drupal/group_permissions": {
-          "type": "vcs",
-          "url": "https://git.drupalcode.org/project/group_permissions.git"
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/project/group_permissions.git"
         }
     },
     "require": {
@@ -25,7 +28,7 @@
         "drupal/core-composer-scaffold": "^10.0@stable",
         "drupal/core-recommended": "^10.0@stable",
         "drush/drush": "^12.0",
-        "localgovdrupal/localgov_microsites": "^3.0.0-alpha1"
+        "localgovdrupal/localgov_microsites": "^4.0@alpha"
     },
     "require-dev": {
         "brianium/paratest": "^6.3",
@@ -84,14 +87,30 @@
             }
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library" ],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme" ]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
         }
     }
 }
