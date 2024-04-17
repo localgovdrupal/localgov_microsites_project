@@ -33,7 +33,7 @@ composer install
 drush si localgov_microsites
 ```
 
-## Runnint PHPUnit tests in Lando
+## Running PHPUnit tests in Lando
 
 The included phpunit.xml.dist file contains configuration for automatically
 running the LocalGov Drupal test suite.
