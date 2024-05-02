@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - '4.x'
+  workflow_dispatch:
 
 env:
   LOCALGOV_DRUPAL_PROJECT: localgovdrupal/localgov_microsites_project
