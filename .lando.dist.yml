@@ -2,7 +2,7 @@ name: localgov-micro
 recipe: drupal10
 config:
   webroot: web
-  php: '8.1'
+  php: '8.2'
 proxy:
   mailhog:
     - mail.localgov-micro.lndo.site
@@ -75,6 +75,9 @@ services:
         - '4444'
       command: ["/usr/local/bin/supervisord", "-c", "/etc/supervisord.conf"]
 tooling:
+  composer:
+    service: appserver
+    cmd: /usr/local/bin/composer
   deprecated:
     service: appserver
     cmd: 'bash -c "/app/bin/phpstan analyse -c /app/phpstan.neon /app/web/profiles/contrib/localgov_*/ /app/web/modules/contrib/localgov_*/  /app/web/themes/contrib/localgov_*"'
