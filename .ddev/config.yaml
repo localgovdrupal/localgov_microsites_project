@@ -7,7 +7,7 @@ router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames:
- - localgov-micro,
+ - localgov-micro
  - localgov-micro-1
  - localgov-micro-2
  - localgov-micro-3
@@ -19,7 +19,7 @@ additional_fqdns:
  - group-2.web
  - group-3.web
  - group-4.web
- - group-5.web
+ - group-5.we
 database:
   type: mariadb
   version: "10.3"
