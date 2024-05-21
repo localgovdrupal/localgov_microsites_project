@@ -19,7 +19,7 @@ additional_fqdns:
  - group-2.web
  - group-3.web
  - group-4.web
- - group-5.we
+ - group-5.web
 database:
   type: mariadb
   version: "10.3"
