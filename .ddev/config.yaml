@@ -6,15 +6,20 @@ webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
-additional_hostnames: [
-  localgov-micro,
-  localgov-micro-1,
-  localgov-micro-2,
-  localgov-micro-3,
-  localgov-micro-4,
-  localgov-micro-5
-]
-additional_fqdns: []
+additional_hostnames:
+ - localgov-micro
+ - localgov-micro-1
+ - localgov-micro-2
+ - localgov-micro-3
+ - localgov-micro-4
+ - localgov-micro-5
+additional_fqdns:
+ - group-0.web
+ - group-1.web
+ - group-2.web
+ - group-3.web
+ - group-4.web
+ - group-5.web
 database:
   type: mariadb
   version: "10.3"
