@@ -18,12 +18,12 @@ proxy:
     - localgov-micro-5.lndo.site
     # PHPUnit test domains
     - appserver
-    - group-a1.appserver
-    - group-a2.appserver
-    - group-a3.appserver
-    - group-b1.appserver
-    - group-b2.appserver
-    - group-b3.appserver
+    - group-0.appserver
+    - group-1.appserver
+    - group-2.appserver
+    - group-3.appserver
+    - group-4.appserver
+    - group-5.appserver
 services:
   appserver:
     xdebug: true
