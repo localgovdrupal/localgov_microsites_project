@@ -10,6 +10,8 @@ on:
   pull_request:
     branches:
       - '4.x'
+  schedule:
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 env:
@@ -32,6 +34,7 @@ jobs:
         php-version:
           - '8.1'
           - '8.2'
+          - '8.3'
 
     steps:
 
@@ -96,6 +99,7 @@ jobs:
         php-version:
           - '8.1'
           - '8.2'
+          - '8.3'
 
     steps:
 
@@ -132,6 +136,7 @@ jobs:
         php-version:
           - '8.1'
           - '8.2'
+          - '8.3'
 
     steps:
 
@@ -167,6 +172,7 @@ jobs:
         php-version:
           - '8.1'
           - '8.2'
+          - '8.3'
 
     steps:
 
@@ -185,7 +191,7 @@ jobs:
             localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-
 
       - name: Start Docker environment
-        run: docker-compose -f docker-compose.yml up -d
+        run: docker compose -f docker-compose.yml up -d
 
       - name: Run PHPUnit tests
         run: |
