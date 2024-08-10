@@ -36,7 +36,9 @@
         "mglaman/phpstan-drupal": "^1.1",
         "phpspec/prophecy-phpunit": "^2",
         "phpstan/phpstan": "^1.5",
-        "phpstan/phpstan-deprecation-rules": "^1.0"
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "spaze/phpstan-disallowed-calls": "^3.4"
     },
     "conflict": {
         "drupal/drupal": "*"
