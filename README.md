@@ -20,7 +20,18 @@ If using Lando, you can then boot up Lando and run the site install
 cd MY_PROJECT
 lando start
 lando composer install
-lando drush si localgov_microsites
+lando drush si localgov_microsites -y
+```
+
+## Using DDEV
+
+If using ddev, you can then boot up ddev and run the site install
+
+```shell
+cd MY_PROJECT
+ddev start
+ddev composer install
+ddev drush si localgov_microsites -y
 ```
 
 ## Not using Lando
@@ -30,7 +41,7 @@ If you're not using lando, you'll still need to run the composer install.
 ```shell
 cd MY_PROJECT
 composer install
-drush si localgov_microsites
+drush si localgov_microsites -y
 ```
 
 ## Running PHPUnit tests in Lando
