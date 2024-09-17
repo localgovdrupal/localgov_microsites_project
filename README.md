@@ -9,7 +9,7 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project --stability beta localgovdrupal/localgov_microsites_project:^4.0@beta MY_PROJECT  --no-install
+composer create-project --stability stable localgovdrupal/localgov_microsites_project:^4.0 MY_PROJECT  --no-install
 ```
 
 ## Using Lando
