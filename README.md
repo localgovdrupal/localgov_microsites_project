@@ -34,9 +34,9 @@ ddev composer install
 ddev drush si localgov_microsites -y
 ```
 
-## Not using Lando
+## Using host machine
 
-If you're not using lando, you'll still need to run the composer install.
+If you're working directly on your host machine, you'll still need to run the composer install.
 
 ```shell
 cd MY_PROJECT
