@@ -76,7 +76,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: Clone drupal_container
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: localgovdrupal/drupal-container
           ref: php${{ matrix.php-version }}
@@ -173,7 +173,7 @@ jobs:
     steps:
 
       - name: Clone Drupal container
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: localgovdrupal/drupal-container
           ref: php${{ matrix.php-version }}
