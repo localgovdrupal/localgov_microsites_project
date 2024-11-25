@@ -65,7 +65,7 @@ jobs:
           echo "LATEST_RELEASE=${LATEST_RELEASE}" >> $GITHUB_ENV
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -102,7 +102,7 @@ jobs:
     steps:
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -137,7 +137,7 @@ jobs:
     steps:
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -179,7 +179,7 @@ jobs:
           ref: php${{ matrix.php-version }}
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
