@@ -9,7 +9,7 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project --stability beta localgovdrupal/localgov_microsites_project:^4.0@beta MY_PROJECT  --no-install
+composer create-project --stability stable localgovdrupal/localgov_microsites_project:^4.0 MY_PROJECT  --no-install
 ```
 
 ## Using Lando
@@ -20,17 +20,28 @@ If using Lando, you can then boot up Lando and run the site install
 cd MY_PROJECT
 lando start
 lando composer install
-lando drush si localgov_microsites
+lando drush si localgov_microsites -y
 ```
 
-## Not using Lando
+## Using DDEV
 
-If you're not using lando, you'll still need to run the composer install.
+If using ddev, you can then boot up ddev and run the site install
+
+```shell
+cd MY_PROJECT
+ddev start
+ddev composer install
+ddev drush si localgov_microsites -y
+```
+
+## Using host machine
+
+If you're working directly on your host machine, you'll still need to run the composer install.
 
 ```shell
 cd MY_PROJECT
 composer install
-drush si localgov_microsites
+drush si localgov_microsites -y
 ```
 
 ## Running PHPUnit tests in Lando

@@ -23,6 +23,8 @@ jobs:
   build:
     name: Install LocalGov Microsites
     runs-on: ubuntu-latest
+    env:
+      COMPOSER_EXIT_ON_PATCH_FAILURE: '1'
 
     strategy:
       fail-fast: false
@@ -65,7 +67,7 @@ jobs:
           echo "LATEST_RELEASE=${LATEST_RELEASE}" >> $GITHUB_ENV
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -76,7 +78,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: Clone drupal_container
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: localgovdrupal/drupal-container
           ref: php${{ matrix.php-version }}
@@ -102,7 +104,7 @@ jobs:
     steps:
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -137,7 +139,7 @@ jobs:
     steps:
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
@@ -173,13 +175,13 @@ jobs:
     steps:
 
       - name: Clone Drupal container
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: localgovdrupal/drupal-container
           ref: php${{ matrix.php-version }}
 
       - name: Cached workspace
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ./html
           key: localgov-build-${{ matrix.localgov-version }}-${{ matrix.drupal-version }}-${{ matrix.php-version }}-${{ github.run_id }}-${{ secrets.CACHE_VERSION }}
