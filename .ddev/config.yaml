@@ -28,7 +28,9 @@ mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
-nodejs_version: "16"
+nodejs_version: "20"
+corepack_enable: true
+
 
 # Key features of ddev's config.yaml:
 
