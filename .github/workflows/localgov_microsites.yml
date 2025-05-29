@@ -6,12 +6,10 @@ name: Test LocalGov Microsites localgovdrupal/localgov_microsites_project projec
 on:
   push:
     branches:
-      - '4.x'
+      - '4.1.x'
   pull_request:
     branches:
-      - '4.x'
-  schedule:
-    - cron: '0 6 * * *'
+      - '4.1.x'
   workflow_dispatch:
 
 env:
@@ -30,12 +28,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '4.x'
+          - '4.1.x'
         drupal-version:
-          - '~10.0'
+          - '~11.0'
         php-version:
-          - '8.1'
-          - '8.2'
           - '8.3'
 
     steps:
@@ -95,9 +91,9 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '4.x'
+          - '4.1.x'
         drupal-version:
-          - '~10.0'
+          - '~11.0'
         php-version:
           - '8.3'
 
@@ -130,9 +126,9 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '4.x'
+          - '4.1.x'
         drupal-version:
-          - '~10.0'
+          - '~11.0'
         php-version:
           - '8.3'
 
@@ -164,12 +160,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '4.x'
+          - '4.1.x'
         drupal-version:
-          - '~10.0'
+          - '~11.0'
         php-version:
-          - '8.1'
-          - '8.2'
           - '8.3'
 
     steps:
