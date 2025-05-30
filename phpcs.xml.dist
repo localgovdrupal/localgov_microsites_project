@@ -9,9 +9,13 @@
   <file>web/modules/contrib/</file>
   <file>web/profiles/contrib/</file>
   <file>web/themes/contrib/</file>
+
   <!-- Exclude 3rd party code -->
   <exclude-pattern>web\/(modules|profiles|themes)\/contrib\/(?!localgov_.*)</exclude-pattern>
   <exclude-pattern>web\/themes\/contrib\/localgov_*./node_modules</exclude-pattern>
+
+  <!-- Exclude profile version -->
+  <exclude-pattern>web/profiles/contrib/localgov*/localgov*.info.yml</exclude-pattern>
 
   <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
   <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
