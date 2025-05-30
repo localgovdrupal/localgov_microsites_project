@@ -6,9 +6,11 @@ name: Test LocalGov Microsites localgovdrupal/localgov_microsites_project projec
 on:
   push:
     branches:
+      - '4.x'
       - '4.1.x'
   pull_request:
     branches:
+      - '4.x'
       - '4.1.x'
   workflow_dispatch:
 
@@ -27,12 +29,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        localgov-version:
-          - '4.1.x'
-        drupal-version:
-          - '~11.0'
-        php-version:
-          - '8.3'
+        include:
+          - localgov-version: '4.1.x'
+            drupal-version: '~10.0'
+            php-version: '8.3'
+          - localgov-version: '4.1.x'
+            drupal-version: '~11.0'
+            php-version: '8.3'
 
     steps:
 
@@ -90,12 +93,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        localgov-version:
-          - '4.1.x'
-        drupal-version:
-          - '~11.0'
-        php-version:
-          - '8.3'
+        include:
+          - localgov-version: '4.1.x'
+            drupal-version: '~10.0'
+            php-version: '8.3'
+          - localgov-version: '4.1.x'
+            drupal-version: '~11.0'
+            php-version: '8.3'
 
     steps:
 
@@ -125,12 +129,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        localgov-version:
-          - '4.1.x'
-        drupal-version:
-          - '~11.0'
-        php-version:
-          - '8.3'
+        include:
+          - localgov-version: '4.1.x'
+            drupal-version: '~10.0'
+            php-version: '8.3'
+          - localgov-version: '4.1.x'
+            drupal-version: '~11.0'
+            php-version: '8.3'
 
     steps:
 
@@ -159,12 +164,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        localgov-version:
-          - '4.1.x'
-        drupal-version:
-          - '~11.0'
-        php-version:
-          - '8.3'
+        include:
+          - localgov-version: '4.1.x'
+            drupal-version: '~10.0'
+            php-version: '8.3'
+          - localgov-version: '4.1.x'
+            drupal-version: '~11.0'
+            php-version: '8.3'
 
     steps:
 
