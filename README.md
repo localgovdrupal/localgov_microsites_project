@@ -130,7 +130,6 @@ ddev ssh
 phpunit --filter=myTestName
 ```
 
-
 ## Maintainers
 
 This project is currently maintained by:
