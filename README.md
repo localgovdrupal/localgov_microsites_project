@@ -2,6 +2,12 @@
 
 This project template provides a starter kit for managing your LocalGov Drupal Microsites dependencies with [Composer](https://getcomposer.org/).
 
+Please note that this is a separate distribution from LocalGov Drupal.
+
+For more information on the Localgov Microsites install profile, please see https://github.com/localgovdrupal/localgov_microsites
+
+For more information on the LocalGov Drupal install profile, please see https://github.com/localgovdrupal/localgov
+
 ## Usage
 
 First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
@@ -129,7 +135,6 @@ Tests can be filtered using the `--filter` option. To only run a specific test:
 ddev ssh
 phpunit --filter=myTestName
 ```
-
 
 ## Maintainers
 
