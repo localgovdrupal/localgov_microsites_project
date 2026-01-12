@@ -102,7 +102,7 @@ When ddev starts, it will attempt to write these to /etc/hosts
 
 If DDEV cannot write to /etc/hosts, you may need to add these manually.
 
-If you are having problems runnign phpunit tests in DDEV, try adding the
+If you are having problems running phpunit tests in DDEV, try adding the
 following to `/etc/hosts`
 
 ```
