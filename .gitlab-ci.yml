@@ -1,0 +1,41 @@
+################
+# GitLabCI template for Drupal projects.
+################
+
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+#
+################
+# Pipeline configuration variables are defined with default values and descriptions in the file
+# https://git.drupalcode.org/project/gitlab_templates/-/blob/main/includes/include.drupalci.variables.yml
+################
+variables:
+  SKIP_CSPELL: "1"
+  OPT_IN_TEST_CURRENT: 0
+  OPT_IN_TEST_MAX_PHP: 0
+  OPT_IN_TEST_PREVIOUS_MAJOR: 1
+  OPT_IN_TEST_NEXT_MAJOR: 0
+
+composer:
+  variables:
+    DRUPAL_CORE: 10.5.8
+
+################
+# Variable overrides for domain testing.
+################
+
+.phpunit-base:
+  before_script:
+    - echo "127.0.0.1 localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-0.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-1.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-2.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-3.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-4.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-5.localhost" >> /etc/hosts
+    - echo "127.0.0.1 group-6.localhost" >> /etc/hosts
