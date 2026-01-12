@@ -4,9 +4,9 @@ This project template provides a starter kit for managing your LocalGov Drupal M
 
 Please note that this is a separate distribution from LocalGov Drupal.
 
-For more information on the Localgov Microsites install profile, please see https://github.com/localgovdrupal/localgov_microsites
+For more information on the Localgov Microsites install profile, please see https://www.drupal.org/project/localgov_microsites
 
-For more information on the LocalGov Drupal install profile, please see https://github.com/localgovdrupal/localgov
+For more information on the LocalGov Drupal install profile, please see https://www.drupal.org/project/localgov
 
 ## Usage
 
@@ -15,7 +15,7 @@ First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#ins
 After that you can create the project:
 
 ```shell
-composer create-project --stability stable localgovdrupal/localgov_microsites_project:^4.0 MY_PROJECT  --no-install
+composer create-project --stability stable drupal/localgov_microsites_project:^4.0 MY_PROJECT  --no-install
 ```
 
 ## Using Lando
@@ -135,8 +135,6 @@ Tests can be filtered using the `--filter` option. To only run a specific test:
 ddev ssh
 phpunit --filter=myTestName
 ```
-
-## Maintainers
 
 This project is currently maintained by:
 
