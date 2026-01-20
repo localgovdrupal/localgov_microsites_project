@@ -78,7 +78,7 @@ tooling:
   composer:
     service: appserver
     cmd: /usr/local/bin/composer
-  deprecated:
+  sca:
     service: appserver
     cmd: 'bash -c "/app/bin/phpstan analyse -c /app/phpstan.neon /app/web/profiles/contrib/localgov_*/ /app/web/modules/contrib/localgov_*/  /app/web/themes/contrib/localgov_*"'
   drush:
