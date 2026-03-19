@@ -1,7 +1,7 @@
 name: localgov-microsites
-type: drupal10
+type: drupal11
 docroot: web
-php_version: "8.2"
+php_version: "8.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -22,7 +22,7 @@ additional_fqdns:
  - group-5.web
 database:
   type: mariadb
-  version: "10.3"
+  version: "10.6"
 nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
@@ -30,7 +30,6 @@ composer_version: ""
 web_environment: []
 nodejs_version: "20"
 corepack_enable: true
-
 
 # Key features of ddev's config.yaml:
 
