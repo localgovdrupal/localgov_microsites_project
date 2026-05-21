@@ -21,10 +21,6 @@ variables:
   OPT_IN_TEST_PREVIOUS_MAJOR: 1
   OPT_IN_TEST_NEXT_MAJOR: 0
 
-composer:
-  variables:
-    DRUPAL_CORE: 10.5.8
-
 ################
 # Variable overrides for domain testing.
 ################
