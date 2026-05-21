@@ -29,7 +29,7 @@
         "drupal/core-recommended": "^11.3",
         "drupal/domain_path": "1.x-dev@dev as 1.5",
         "drupal/localgov_microsites": "5.x-dev",
-        "drupal/localgov_microsites_group": "4.x-dev as 4.4.0",
+        "drupal/localgov_microsites_group": "^4.5",
         "drupal/localgov_core": "^3.0",
         "drush/drush": "^13.0"
     },
